@@ -38,5 +38,8 @@ generateBtn.addEventListener("click", () => {
   const lower =
     lowerList[Math.floor(Math.random() * lowerList.length)];
 
-  theme.textContent = `「${kana}」から始まる ${lower}`;
+  theme.innerHTML = `
+    <div class="upper">「${kana}」から始まる</div>
+    <div class="lower">${lower}</div>
+  `;
 });
