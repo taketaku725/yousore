@@ -11,10 +11,21 @@ fetch("themes.json")
     themeData = data;
   });
 
+// 初期モード設定
+document.body.classList.add("normal-mode");
+
 modeBtn.addEventListener("click", () => {
   mode = mode === "normal" ? "drink" : "normal";
-  modeBtn.textContent =
-    mode === "normal" ? "ノーマルモード" : "大人モード";
+
+  document.body.classList.remove("normal-mode", "drink-mode");
+
+  if (mode === "normal") {
+    document.body.classList.add("normal-mode");
+    modeBtn.textContent = "ノーマルモード";
+  } else {
+    document.body.classList.add("drink-mode");
+    modeBtn.textContent = "飲み会用モード";
+  }
 });
 
 generateBtn.addEventListener("click", () => {
