@@ -5,7 +5,7 @@
 }
 
 html {
-  touch-action: manipulation; /* ダブルタップ防止 */
+  touch-action: manipulation;
 }
 
 body {
@@ -13,9 +13,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #111;
-  color: #fff;
   font-family: sans-serif;
+  transition: background 0.4s ease;
+}
+
+/* ▼ モード背景 */
+body.normal-mode {
+  background: #0f1c2e; /* 暗めの青 */
+  color: #ffffff;
+}
+
+body.drink-mode {
+  background: #2a0f3a; /* 怪しめの紫 */
+  color: #ffffff;
 }
 
 .container {
